@@ -1,0 +1,116 @@
+{
+  "PUB-001": {
+    "name": "자립형일자리 코드",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  },
+  "PUB-002": {
+    "name": "노인일자리 시스템 코드",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  },
+  "PUB-003": {
+    "name": "자립형일자리 수행기관",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  },
+  "PUB-004": {
+    "name": "자립형일자리 사업모집공고",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  },
+  "PUB-005": {
+    "name": "장기요양보험 인정현황",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-006": {
+    "name": "연령별 재해자수",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-007": {
+    "name": "산업별 사고재해자수",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-008": {
+    "name": "노동지청별 재해자수",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-009": {
+    "name": "산업·규모별 재해자수",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-010": {
+    "name": "시도별 장기요양 판정",
+    "endpoint": "",
+    "format": "csv",
+    "method": "GET",
+    "params": {},
+    "key_fields": [],
+    "auth_param": null
+  },
+  "PUB-011": {
+    "name": "장기요양기관 검색",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  },
+  "PUB-012": {
+    "name": "100세누리 구인정보",
+    "endpoint": "",
+    "format": "xml",
+    "method": "GET",
+    "params": {},
+    "item_path": "response.body.items.item",
+    "key_fields": [],
+    "auth_param": "serviceKey"
+  }
+}
