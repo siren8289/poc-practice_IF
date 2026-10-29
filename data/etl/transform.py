@@ -1,8 +1,4 @@
-"""CSV/JSON/XML 파싱과 필수값·자연키 정규화.
-
-원본 IF_v2 data/etl/transform.py 계약을 유지한다.
-parse_data / normalize_rows 시그니처는 data/tests/test_transform.py가 고정한다.
-"""
+"""CSV/JSON/XML 파싱과 필수값·자연키 정규화."""
 
 import csv
 import hashlib
@@ -103,31 +99,3 @@ def normalize_rows(rows, source):
         normalized.append({"record_key": record_key, "payload": row})
 
     return normalized
-
-
-def split_quality(rows, source):
-    """필수값 누락과 자연키 중복을 나눠 품질 건수를 센다.
-
-    normalize_rows는 두 경우를 함께 버리므로, 경계 케이스의 품질 건수는
-    여기서 먼저 누락 행을 분리한 뒤 남은 행만 정규화해 구한다.
-    """
-    required_fields = source.get("required_fields", [])
-    rejected = []
-    candidates = []
-    for row in rows:
-        missing = [
-            field
-            for field in required_fields
-            if row.get(field) is None or str(row[field]).strip() == ""
-        ]
-        if missing:
-            rejected.append({"row": row, "fields": missing})
-        else:
-            candidates.append(row)
-
-    normalized = normalize_rows(candidates, {**source, "required_fields": []})
-    return {
-        "records": normalized,
-        "rejected_count": len(rejected),
-        "duplicate_count": len(candidates) - len(normalized),
-    }
